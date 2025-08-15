@@ -1,15 +1,13 @@
+import { Outlet } from "react-router";
+import ThemeProvider from "../../../ThemeContext";
 import Header from "../../Header/Header";
 import MouseFollower from "../../MouseFollower/MouseFollower";
-import ThemeProvider from "../../../ThemeContext";
-const Layout = ({ children }: { children: React.ReactNode }) => {
-
- 
-
+const Layout = () => {
   return (
     <ThemeProvider>
       <MouseFollower />
       <Header />
-      {children}
+      <Outlet />
     </ThemeProvider>
   );
 };

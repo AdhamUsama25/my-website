@@ -1,8 +1,8 @@
-import classes from "./SkillCard.module.scss";
-import { ISkill } from "../../Types/resume.types";
-import wooshSound from "../../assets/sounds/Woosh.wav";
 import useSound from "use-sound";
+import wooshSound from "../../assets/sounds/Woosh.wav";
 import { useTheme } from "../../ThemeContext";
+import { ISkill } from "../../Types/resume.types";
+import classes from "./SkillCard.module.scss";
 
 const SkillCard = ({ skill }: { skill: ISkill }) => {
   const [play] = useSound(wooshSound, { volume: 0.3 });
@@ -17,7 +17,7 @@ const SkillCard = ({ skill }: { skill: ISkill }) => {
         <div className={classes.Details}>
           <h3>{skill.name}</h3>
           <p id="proficiency">{skill.proficiency}</p>
-          <p id="experience">{skill.experience}</p>
+          {/* <p id="experience">{skill.experience}</p> */}
         </div>
       </div>
     </div>

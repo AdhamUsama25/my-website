@@ -1,12 +1,13 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ContactButton from "../../Components/ContactButton/ContactButton";
-import contacts from "../../data/contacts.data";
-import classes from "./Home.module.scss";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import useSound from "use-sound";
 import pageTurnSound from "../../assets/sounds/page-turn.mp3";
+import ContactButton from "../../Components/ContactButton/ContactButton";
+import contacts from "../../data/contacts.data";
 import { useTheme } from "../../ThemeContext";
+import classes from "./Home.module.scss";
+
 const Home = () => {
   const isDark = useTheme();
 

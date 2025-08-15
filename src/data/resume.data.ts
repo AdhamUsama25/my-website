@@ -1,17 +1,34 @@
-import { ISkill, type IResumeInfo } from "../Types/resume.types";
-import HTML_icon from "../assets/Skills/HTML.svg";
+import { IResumeInfo, ISkill } from "../Types/resume.types";
 import CSS_icon from "../assets/Skills/CSS.png";
+import Express_icon from "../assets/Skills/ExpressJS.png";
+import HTML_icon from "../assets/Skills/HTML.svg";
 import JS_icon from "../assets/Skills/JS.png";
-import TS_icon from "../assets/Skills/TS.png";
 import NextIcon from "../assets/Skills/Next.js.png";
-import React_icon from "../assets/Skills/React.png";
+import NodeJS_icon from "../assets/Skills/NodeJS.svg";
 import Redux_icon from "../assets/Skills/Redux.png";
 import Sass_icon from "../assets/Skills/Sass.png";
+import TS_icon from "../assets/Skills/TS.png";
 import Tailwind_icon from "../assets/Skills/Tailwind.png";
-import NodeJS_icon from "../assets/Skills/NodeJS.svg";
-import Express_icon from "../assets/Skills/ExpressJS.png";
+import React_icon from "../assets/Skills/react.svg";
 
 export const resumeWorkExperience: IResumeInfo[] = [
+  {
+    organization: {
+      name: "Ezz medical industries",
+      logo: "",
+      url: "https://www.ezzmedical.com",
+    },
+    title: "Software Developer",
+    startDate: "Nov 2024",
+    endDate: "Present",
+    location: "Cairo, Egypt",
+    responsibilities: [
+      "Developed and implemented internal software solutions to enhance engineering efficiency and streamline industrial processes.",
+      "Key Projects:",
+      "- Engineering Requirements Application (ERA): Created a system to document and manage product requirements, including standard requirements, CAR, and PRD, as well as design decisions, improving project clarity and coordination.",
+      "- Operation Management System (OMS): Designed an application to oversee industrial processes, from defining production steps to managing construction, optimizing workflow and operational efficiency.",
+    ],
+  },
   {
     organization: {
       name: "StorkyApp",
@@ -90,7 +107,7 @@ export const resumeSkills: ISkill[] = [
   {
     name: "NextJS",
     icon: NextIcon,
-    proficiency: "Amateur",
+    proficiency: "Competent",
     experience: "1 month",
   },
   {

@@ -1,12 +1,14 @@
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons/faLightbulb";
+import { faMoon } from "@fortawesome/free-solid-svg-icons/faMoon";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import useSound from "use-sound";
+import { useTheme, useThemeUpdate } from "../../ThemeContext";
+import myLogo from "../../assets/AU.svg";
+import lightsSound from "../../assets/sounds/Switch.wav";
 import navigation from "../../data/navigation.data";
 import classes from "./Header.module.scss";
-import myLogo from "../../assets/AU.svg";
-import useSound from "use-sound";
-import lightsSound from "../../assets/sounds/Switch.wav";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faLightbulb } from "@fortawesome/free-solid-svg-icons";
-import { useTheme, useThemeUpdate } from "../../ThemeContext";
+
 
 
 
@@ -40,7 +42,7 @@ const Header = () => {
           </button>
           <nav>
             <ul>
-              {navigation.map((nav, idx) => (
+              {navigation?.map((nav, idx) => (
                 <li key={idx}>
                   <Link to={"/" + nav.link}>
                     {nav.name}

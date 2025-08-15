@@ -1,20 +1,16 @@
 import ResumeContact from "../../Components/ResumeContact/ResumeContact";
-import contacts from "../../data/contacts.data";
-import ResumeInfoViewer from "./ResumeInfoViewer/ResumeInfoViewer";
-import classes from "./Resume.module.scss";
-import {
-  resumeWorkExperience,
-  resumeEducation,
-  resumeSkills,
-} from "../../data/resume.data";
 import SkillCard from "../../Components/SkillCard/SkillCard";
+import contacts from "../../data/contacts.data";
+import { resumeEducation, resumeSkills, resumeWorkExperience } from "../../data/resume.data";
 import { useTheme } from "../../ThemeContext";
+import classes from "./Resume.module.scss";
+import ResumeInfoViewer from "./ResumeInfoViewer/ResumeInfoViewer";
 
 const Resume = () => {
   const isDark = useTheme();
 
   return (
-    <main className={[classes.ResumePage, isDark&& classes.Dark].join(" ")}>
+    <main className={[classes.ResumePage, isDark && classes.Dark].join(" ")}>
       <div className={[classes.Content, "container"].join(" ")}>
         <ul className={classes.Contacts}>
           {contacts.map((contact, _idx) => (

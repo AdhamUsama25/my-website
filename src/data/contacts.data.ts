@@ -1,19 +1,9 @@
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import IContact from "../Types/contacts.types";
 
-import {
-  faXTwitter,
-  faLinkedinIn,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const contacts: IContact[] = [
-  {
-    name: "X",
-    value: "AdhamUsama25",
-    url: "https://x.com/AdhamUsama25",
-    icon: faXTwitter,
-  },
   {
     name: "LinkedIn",
     value: "AdhamUsama25",
@@ -37,7 +27,7 @@ const contacts: IContact[] = [
     value: "+201016480880",
     url: "tel:+201027588741",
     icon: faPhone,
-  }
+  },
 ];
 
 export default contacts;

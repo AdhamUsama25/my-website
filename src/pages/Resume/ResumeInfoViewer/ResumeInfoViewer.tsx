@@ -1,7 +1,8 @@
 import { useRef } from "react";
+import { useTheme } from "../../../ThemeContext";
 import { IResumeInfo } from "../../../Types/resume.types";
 import classes from "./ResumeInfoViewer.module.scss";
-import { useTheme } from "../../../ThemeContext";
+
 const ResumeInfoViewer = ({
   experience: info,
   isLast,

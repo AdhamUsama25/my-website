@@ -1,42 +1,35 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./App.css";
+import Layout from "./Components/UI/Layout/Layout";
+import Contact from "./pages/Contact/Contact";
 import Home from "./pages/home/Home";
 import Resume from "./pages/Resume/Resume";
-import Contact from "./pages/Contact/Contact";
-import Layout from "./Components/UI/Layout/Layout";
+
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
-      element: (
-        <Layout>
-          <Home />
-        </Layout>
-      ),
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: "/contact",
+          element: <Contact />
+        },
+        {
+          path: "/resume",
+          element: <Resume />,
+        },
+      ]
     },
-    {
-      path: "/contact",
-      element: (
-        <Layout>
-          <Contact />
-        </Layout>
-      ),
-    },
-    {
-      path: "/resume",
-      element: (
-        <Layout>
-          <Resume />
-        </Layout>
-      ),
-    },
+
+
   ]);
 
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <RouterProvider router={router} />
   );
 }
 
