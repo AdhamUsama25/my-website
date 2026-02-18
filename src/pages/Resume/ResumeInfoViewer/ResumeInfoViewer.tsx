@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useTheme } from "../../../ThemeContext";
 import { IResumeInfo } from "../../../Types/resume.types";
 import classes from "./ResumeInfoViewer.module.scss";
+import myLogo from "../../../assets/AU.svg";
 
 const ResumeInfoViewer = ({
   experience: info,
@@ -27,12 +28,9 @@ const ResumeInfoViewer = ({
         borderLeft: isLast ? "none" : "2px dashed var(--gray-color)",
       }}
     >
-      <div>
-        {organization.logo && (
-          <div className={classes.Avatar} ref={companyLogoRef}>
-            <img src={organization.logo} alt={organization.name} />
-          </div>
-        )}
+
+      <div className={classes.Avatar} ref={companyLogoRef}>
+        <img src={organization.logo || myLogo} alt={organization.name} />
       </div>
 
       <div className={classes.Details}>

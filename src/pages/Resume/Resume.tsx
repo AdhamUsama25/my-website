@@ -25,15 +25,15 @@ const Resume = () => {
 
           <div>
             <ul>
-              <li>
                 {resumeWorkExperience.map((experience, _idx) => (
+              <li>
                   <ResumeInfoViewer
                     key={_idx}
                     experience={experience}
                     isLast={_idx === resumeWorkExperience.length - 1}
                   />
-                ))}
               </li>
+                ))}
             </ul>
           </div>
         </section>

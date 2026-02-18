@@ -24,23 +24,28 @@
     .Avatar {
       opacity: 1;
 
-      -webkit-animation: scale-in-center 0.2s
+      -webkit-animation: scale-in-center 0.2s 0.3s
         cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-      animation: scale-in-center 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: scale-in-center 0.2s 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+    }
+
+    .Title {
+      margin-top: 1rem;
     }
   }
 
   .Avatar {
     opacity: 0;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3px solid var(--primary-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     position: absolute;
-    left: -7rem;
-    top: -2.5rem;
+    left: 1.5rem;
+    top: -1.5rem;
 
     img {
       width: 100%;
@@ -55,17 +60,20 @@
     overflow: hidden;
     padding-left: 2rem;
     transform: translateY(-20px);
+    transition: all 0.2s;
 
     &:hover {
       height: auto;
       height: calc-size(auto);
-      transition: all 0.5s;
 
       .Description {
         font-weight: 500;
-        -webkit-animation: slide-in-top 0.5s
-          cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-        animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        -webkit-animation:
+          slide-in-top 0,
+          2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation:
+          slide-in-top 0,
+          2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
       }
     }
 
@@ -77,13 +85,15 @@
         font-size: 1.5rem;
         font-weight: 700;
         color: var(--primary-color);
-        transition: color 0.3s;
+        transition: all 0.3s;
 
         &:hover {
+          margin-left: 3rem;
           color: var(--dark-primary-color);
         }
       }
       .Title {
+        transition: all 0.2s;
         font-size: 1.2rem;
         font-weight: 700;
         color: var(--secondary-color);
@@ -108,32 +118,24 @@
   }
 
   &.Dark {
-  
-   
     .Avatar {
       border: 3px solid var(--primary-color);
       box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  
-     
     }
-  
+
     .Details {
-  
       &:hover {
-       
-  
         .Description {
           font-weight: 400;
         }
       }
-  
+
       .Info {
-  
         .Company {
           font-weight: 600;
           color: white;
-          transition: color 0.2s;
-  
+          transition: all 0.3s;
+
           &:hover {
             color: var(--primary-color);
           }
@@ -143,7 +145,7 @@
           opacity: 0.9;
           color: white;
         }
-  
+
         .Date {
           margin-top: 6px;
         }
@@ -167,12 +169,6 @@
   .ResumeInfoViewer {
     padding-bottom: 1rem !important;
 
-    .Avatar{
-      width: 4rem;
-      height: 4rem;
-      left: -6rem;
-      top: -2rem;
-    }
     .Company {
       font-size: 1.25rem !important;
     }
@@ -182,25 +178,23 @@
     }
 
     .Date,
-    .Location,.Description {
+    .Location,
+    .Description {
       font-size: 0.75rem !important;
     }
   }
 }
 
-@media screen and (width <= 600px){
-  
+@media screen and (width <= 600px) {
   .ResumeInfoViewer {
     padding-bottom: 1rem !important;
-    
+
     .Avatar {
-      width: 3rem;
-      height: 3rem;
-      left: -5rem;
-      top: -1.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      left: 1rem;
+      top: -1.75rem;
     }
-
-
 
     &::before {
       content: "";
@@ -215,6 +209,9 @@
       .Info {
         .Company {
           font-size: 1rem !important;
+          &:hover{
+            margin-left: 2rem;
+          }
         }
         .Title {
           font-size: 0.75rem !important;

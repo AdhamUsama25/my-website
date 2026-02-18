@@ -1,4 +1,5 @@
-import { IResumeInfo, ISkill } from "../Types/resume.types";
+import type { IOrganization, IResumeInfo, ISkill } from "../Types/resume.types";
+import StoryAppLogo from "../assets/Logos/StorkyApp logo.png";
 import CSS_icon from "../assets/Skills/CSS.png";
 import Express_icon from "../assets/Skills/ExpressJS.png";
 import HTML_icon from "../assets/Skills/HTML.svg";
@@ -10,17 +11,48 @@ import Sass_icon from "../assets/Skills/Sass.png";
 import TS_icon from "../assets/Skills/TS.png";
 import Tailwind_icon from "../assets/Skills/Tailwind.png";
 import React_icon from "../assets/Skills/react.svg";
+import EzzMedicalLogo from "../assets/Logos/ezzmedical.png"
+import SynapseAnalyticsLogo from "../assets/Logos/synapse_analytics_logo.jpeg"
+import facultyOfEngineeringLogo from "../assets/Logos/Faculty of Engineering - Tanta University Logo.png"
+
+
+const organizations: Record<string, IOrganization> = {
+  storkyApp: {
+    name: "Storky App",
+    logo: StoryAppLogo,
+    url: "https://storkyapp.com/"
+  },
+  ezzMedical: {
+    name: "Ezz Medical Industries",
+    logo: EzzMedicalLogo,
+    url: "https://www.ezzmedical.com",
+  },
+  synapseAnalytics: {
+    name: "Synapse Analytics",
+    logo: SynapseAnalyticsLogo,
+    url: "https://synapse-analytics.io/",
+  },
+  facultyOfEngineering: {
+    name: "Faculty of Engineering - Tanta University",
+    url: "https://eng.tanta.edu.eg/",
+    logo: facultyOfEngineeringLogo,
+  }
+}
 
 export const resumeWorkExperience: IResumeInfo[] = [
   {
-    organization: {
-      name: "Ezz medical industries",
-      logo: "",
-      url: "https://www.ezzmedical.com",
-    },
-    title: "Software Developer",
-    startDate: "Nov 2024",
+    organization: organizations.synapseAnalytics,
+    title: "Frontend Engineer II",
+    startDate: "Jan 2026",
     endDate: "Present",
+    location: "Cairo, Egypt",
+    responsibilities: [],
+  },
+  {
+    organization: organizations.ezzMedical,
+    title: "Frontend Engineer",
+    startDate: "Nov 2024",
+    endDate: "Dec 2025",
     location: "Cairo, Egypt",
     responsibilities: [
       "Developed and implemented internal software solutions to enhance engineering efficiency and streamline industrial processes.",
@@ -30,11 +62,7 @@ export const resumeWorkExperience: IResumeInfo[] = [
     ],
   },
   {
-    organization: {
-      name: "StorkyApp",
-      logo: "",
-      url: "https://storkyapp.com",
-    },
+    organization: organizations.storkyApp,
     title: "Software Developer",
     startDate: "Dec 2022",
     endDate: "Dec 2023",
@@ -48,11 +76,7 @@ export const resumeWorkExperience: IResumeInfo[] = [
     ],
   },
   {
-    organization: {
-      name: "StorkyApp",
-      logo: "",
-      url: "https://storkyapp.com",
-    },
+    organization: organizations.storkyApp,
     title: "Software Developer Intern",
     startDate: "Jun 2022",
     endDate: "Aug 2023",
@@ -66,11 +90,7 @@ export const resumeWorkExperience: IResumeInfo[] = [
 
 export const resumeEducation: IResumeInfo[] = [
   {
-    organization: {
-      name: "Faculty of Engineering - Tanta University",
-      url: "https://eng.tanta.edu.eg/",
-      logo: "",
-    },
+    organization: organizations.facultyOfEngineering,
     title: "Bachelor of Computer Engineering & Automatic Control",
     startDate: "Sep 2019",
     endDate: "Jul 2024",
@@ -147,3 +167,4 @@ export const resumeSkills: ISkill[] = [
     experience: "2 years",
   },
 ];
+

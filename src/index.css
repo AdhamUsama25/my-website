@@ -15,6 +15,9 @@
   --primary-color: #48cfcb;
   --secondary-color: #424242;
   --dark-primary-color: #229799;
+
+  interpolate-size: allow-keywords;
+
 }
 
 [theme-mode="light"] {

@@ -1,14 +1,16 @@
 export interface IResumeInfo {
-  organization: {
-    name: string;
-    logo?: string;
-    url?: string;
-  };
+  organization: IOrganization;
   title: string;
   startDate: string;
   endDate: string;
   location: string;
   responsibilities?: string[];
+}
+
+export interface IOrganization {
+  name: string;
+  logo?: string;
+  url?: string;
 }
 
 export interface ISkill {
